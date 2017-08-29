@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Johnny Appleseed</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- FontAwesome Icons -->
+    <script src="https://use.fontawesome.com/16328d475d.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  </head>
+
+  <style>
+
+  ::-webkit-scrollbar{
+    width: 0px;
+  }
+  ::-webkit-scrollbar-track-piece{
+    background-color: transparent;
+    -webkit-border-radius: 0px;
+  }
+
+  .h1{
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .h4{
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .all{
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+  .img-3d{
+    transform: scale(0.96, 0.96);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-transition: 0.05s ease-in-out;
+    -moz-transition: 0.05s ease-in-out;
+    -o-transition: 0.05s ease-in-out;
+    transition: 0.05s ease-in-out;
+  }
+
+  .img-3d:hover{
+    transform: scale(0.97, 0.97);
+    transform-origin: center;
+    opacity: 0.8;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.25), 0 8px 22px 0 rgba(0,0,0,0.25);
+    cursor:pointer;
+  }
+
+  .img-3d:active{
+    transform: scale(0.95, 0.95);
+    transform-origin: center;
+    opacity: 0.5;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0px 0 rgba(0,0,0,0);
+    cursor:pointer;
+  }
+
+  .div-hide{
+    opacity: 0.2;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    filter: grayscale(100%);
+  }
+
+  .div-show{
+    opacity: 1;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+  .menu{
+    max-height:0px;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+  .menu-show{
+    max-height:200px;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+  .menu-toggle{
+    transform:rotate(0deg);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+  .menu-toggle-flip{
+    transform:rotate(180deg);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+  .icon-btn{
+    opacity:0.75;
+    color:#ECEFF1;
+    cursor:pointer;
+  }
+
+  .icon-btn:hover{
+    opacity:1;
+    color:#FAFAFA;
+  }
+
+  .icon-btn:active{
+    opacity:0.5;
+    color:#B0BEC5;
+  }
+
+  .item-border{
+    border-style:solid;
+    border-color:#FAFAFA;
+  }
+
+  </style>
+
+
+  <body style="background-color:#FAFAFA; font-family:'Raleway',sans-serif">
+    <div class="container-fluid">
+
+      <header>
+        <div class="row justify-content-center align-items-center" style="background-color:#78909C; padding:15px">
+          <div class="col-2 text-right">
+            <a href="mailto:example@mail.com?Subject=Hi&#33"><i class="fa fa-envelope-o fa-2x icon-btn" aria-hidden="true"></i></a>
+          </div>
+          <div class="col-6 col-sm-5 col-md-4 col-lg-3 col-xl-2">
+            <h3 class="text-center" style="color:#FAFAFA">Johnny<br>Appleseed</h3>
+          </div>
+          <div class="col-2">
+            <a href="resume.pdf"><i class="fa fa-address-card-o fa-2x icon-btn" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="row menu justify-content-center" style="background-color:#263238; padding-top:6px">
+          <div class="col-6 col-sm-4 col-xl-2">
+            <h4 id="toggle-all" class="icon-btn text-center" style="padding-top:2.5px; padding-bottom:2.5px">All</h4>
+          </div>
+          <div class="col-6 col-sm-4 col-xl-2">
+            <h4 id="toggle-work" class="icon-btn text-center" style="padding-top:2.5px; padding-bottom:2.5px">Work</h4>
+          </div>
+          <div class="col-6 col-sm-4 col-xl-2">
+            <h4 id="toggle-music" class="icon-btn text-center" style="padding-top:2.5px; padding-bottom:2.5px">Music</h4>
+          </div>
+          <div class="col-6 col-sm-4 col-xl-2">
+            <h4 id="toggle-art" class="icon-btn text-center" style="padding-top:2.5px; padding-bottom:2.5px">Art</h4>
+          </div>
+          <div class="col-6 col-sm-4 col-xl-2">
+            <h4 id="toggle-photos" class="icon-btn text-center" style="padding-top:2.5px; padding-bottom:2.5px">Photos</h4>
+          </div>
+          <div class="col-6 col-sm-4 col-xl-2">
+            <h4 id="toggle-film" class="icon-btn text-center" style="padding-top:2.5px; padding-bottom:2.5px">Film</h4>
+          </div>
+        </div>
+        <div id="toggle-menu" class="row justify-content-center">
+          <div class="col-12 text-center" style="background-color:#455A64; cursor:pointer">
+            <i class="fa fa-caret-down menu-toggle" aria-hidden="true" style="color:#FAFAFA"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="row item-border">
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all music item-border" style="padding:0; background-color:#b71c1c">
+          <a href=""><img src="http://via.placeholder.com/500/e53935/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all art item-border" style="padding:0; background-color:#880E4F">
+          <a href=""><img src="http://via.placeholder.com/500/D81B60/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all work item-border" style="padding:0; background-color:#4A148C">
+          <a href=""><img src="http://via.placeholder.com/500/8E24AA/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all photos item-border" style="padding:0; background-color:#311B92">
+          <a href=""><img src="http://via.placeholder.com/500/5E35B1/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all film item-border" style="padding:0; background-color:#1A237E">
+          <a href=""><img src="http://via.placeholder.com/500/3949AB/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all art item-border" style="padding:0; background-color:#0D47A1">
+          <a href=""><img src="http://via.placeholder.com/500/1E88E5/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all work item-border" style="padding:0; background-color:#01579B">
+          <a href=""><img src="http://via.placeholder.com/500/039BE5/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all art item-border" style="padding:0; background-color:#006064">
+          <a href=""><img src="http://via.placeholder.com/500/00ACC1/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all photos item-border" style="padding:0; background-color:#004D40">
+          <a href=""><img src="http://via.placeholder.com/500/00897B/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all film item-border" style="padding:0; background-color:#1B5E20">
+          <a href=""><img src="http://via.placeholder.com/500/43A047/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all music item-border" style="padding:0; background-color:#33691E">
+          <a href=""><img src="http://via.placeholder.com/500/7CB342/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all work item-border" style="padding:0; background-color:#827717">
+          <a href=""><img src="http://via.placeholder.com/500/C0CA33/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all music item-border" style="padding:0; background-color:#F57F17">
+          <a href=""><img src="http://via.placeholder.com/500/FDD835/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all work item-border" style="padding:0; background-color:#FF6F00">
+          <a href=""><img src="http://via.placeholder.com/500/FFB300/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all art item-border" style="padding:0; background-color:#E65100">
+          <a href=""><img src="http://via.placeholder.com/500/FB8C00/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all film item-border" style="padding:0; background-color:#BF360C">
+          <a href=""><img src="http://via.placeholder.com/500/F4511E/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all work item-border" style="padding:0; background-color:#3E2723">
+          <a href=""><img src="http://via.placeholder.com/500/6D4C41/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all work item-border" style="padding:0; background-color:#212121">
+          <a href=""><img src="http://via.placeholder.com/500/757575/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 all work item-border" style="padding:0; background-color:#263238">
+          <a href=""><img src="http://via.placeholder.com/500/546E7A/FAFAFA" class="img-fluid img-3d"></a>
+        </div>
+      </div>
+
+      <footer>
+        <div class="row justify-content-center" style="background-color:#263238; padding:10px">
+          <div class="col-12 text-center">
+            <a href="https://github.com/" target="_blank"><i class="fa fa-github-alt fa-lg icon-btn" aria-hidden="true" style="padding:10px"></i></a>
+            <a href="https://instagram.com/" target="_blank"><i class="fa fa-instagram fa-lg icon-btn" aria-hidden="true" style="padding:10px"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-lg icon-btn" aria-hidden="true" style="padding:10px"></i></a>
+            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin fa-lg icon-btn" aria-hidden="true" style="padding:10px"></i></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+    $("#toggle-menu").click(function() {
+      $(".menu").toggleClass("menu-show");
+      $(".menu-toggle").toggleClass("menu-toggle-flip");
+    });
+
+    $("#toggle-all").click(function() {
+      $(".all").removeClass("div-hide");
+      $(".all").addClass("div-show");
+    });
+
+    $("#toggle-music").click(function() {
+      $(".all:not(.music)").addClass("div-hide");
+      $(".all:not(.music)").removeClass("div-show");
+      $(".music").removeClass("div-hide");
+      $(".music").addClass("div-show");
+    });
+
+    $("#toggle-work").click(function() {
+      $(".all:not(.work)").addClass("div-hide");
+      $(".all:not(.work)").removeClass("div-show");
+      $(".work").removeClass("div-hide");
+      $(".work").addClass("div-show");
+    });
+
+    $("#toggle-art").click(function() {
+      $(".all:not(.art)").addClass("div-hide");
+      $(".all:not(.art)").removeClass("div-show");
+      $(".art").removeClass("div-hide");
+      $(".art").addClass("div-show");
+    });
+
+    $("#toggle-photos").click(function() {
+      $(".all:not(.photos)").addClass("div-hide");
+      $(".all:not(.photos)").removeClass("div-show");
+      $(".photos").removeClass("div-hide");
+      $(".photos").addClass("div-show");
+    });
+
+    $("#toggle-film").click(function() {
+      $(".all:not(.film)").addClass("div-hide");
+      $(".all:not(.film)").removeClass("div-show");
+      $(".film").removeClass("div-hide");
+      $(".film").addClass("div-show");
+    });
+
+    </script>
+
+  </body>
+</html>
