@@ -1,3 +1,6 @@
+# UPDATE
+I have moved on from this project to work on a new personal website coded without Bootstrap or any icon libraries.
+
 # Hello!
 *Tomatillo* is a responsive multimedia Bootstrap portfolio template that I made for my personal website. The template displays a series of thumbnails (implemented as columns) and allows for sorting via type.
 
